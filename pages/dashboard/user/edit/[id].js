@@ -25,7 +25,7 @@ export default function Component({ posts }) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const jsonData = {
-      id: data.get('txt_studentid'),
+      id: data.get('txt_id'),
       studentid: data.get('txt_studentid'),
       firstname: data.get('txt_firstname'),
       lastname: data.get('txt_lastname'),
@@ -34,7 +34,7 @@ export default function Component({ posts }) {
       status: data.get('txt_status')
     }
 
-      fetch(`https://frontend-ib7j.vercel.app/api/users`, {
+      fetch(`https://frontend027.vercel.app/api/users`, {
         method: 'PUT', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
@@ -81,8 +81,8 @@ export default function Component({ posts }) {
             <label></label>
             <input
             type="hidden"
-            name="txt_studentid"
-            id="txt_studentid"
+            name="txt_id"
+            id="txt_id"
             className="form-control"
             defaultValue={post.id}
             />
@@ -92,8 +92,8 @@ export default function Component({ posts }) {
             <label>ID:</label>
             <input
             type="text"
-            name="txt_studentid"
-            id="txt_studentid"
+            name="txt_id"
+            id="txt_id"
             className="form-control bg-white"
             defaultValue={post.id}
             required
